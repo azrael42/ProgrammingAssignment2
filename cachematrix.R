@@ -35,6 +35,8 @@ cacheSolve <- function( X, ... ) {
   inv
 }
 
+## Example how to use of the two functions
+
 A <- makeCacheMatrix()
 A$get()
 cacheSolve(A)
