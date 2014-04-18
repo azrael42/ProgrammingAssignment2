@@ -28,6 +28,11 @@ cachemean <- function(x, ...) {
 }
 
 a <- makeVector(1:200)
+a$get()
 cachemean(a)
 cachemean(a)
+
+a$set(200:300)
 cachemean(a)
+cachemean(a) 
+cachemean(a) * 77

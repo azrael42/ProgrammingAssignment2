@@ -37,3 +37,15 @@ cacheSolve <- function(X, ...) {
   X$setInverse(inv)
   inv
 }
+
+A <- makeCacheMatrix()
+A$get()
+cacheSolve(A)
+cacheSolve(A)
+
+A$set(matrix(rnorm(16),4,4))
+cacheSolve(A)
+cacheSolve(A) 
+cacheSolve(A) %*% A$get()
+round(cacheSolve(A) %*% A$get(), 10)
+round(A$get() %*% cacheSolve(A), 10)
