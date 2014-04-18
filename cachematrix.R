@@ -6,7 +6,7 @@
 # setInverse: Sets the inverse matrix of the represented matrix 
 # getInverse: Gets the inverse matrix of the represented matrix 
 
-makeCacheMatrix <- function(initMatrix = matrix()) {
+makeCacheMatrix <- function( initMatrix = matrix() ) {
   inv <- NULL
   set <- function(newMatrix) {
     initMatrix <<- newMatrix
@@ -15,16 +15,14 @@ makeCacheMatrix <- function(initMatrix = matrix()) {
   get <- function() initMatrix
   setInverse <- function(newInverse) inv <<- newInverse
   getInverse <- function() inv
-  list(set = set, get = get,
-       setInverse = setInverse,
-       getInverse = getInverse)
+  list(set = set, get = get, setInverse = setInverse, getInverse = getInverse)
 }
 
 
 ## Compute the inverse of a matrix represented by a makeCacheMatrix list
 ## If the inverse has been computed before, the cached value is returned
 
-cacheSolve <- function(X, ...) {
+cacheSolve <- function( X, ... ) {
   ## Return a matrix that is the inverse of 'X'
   inv <- X$getInverse()
   if(!is.null(inv)) {
