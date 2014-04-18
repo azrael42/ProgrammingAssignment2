@@ -1,7 +1,6 @@
 ## Two functions to automatically cache matrix inversion 
 
-# Creates a special kind of "matrix" which is really a list 
-# containing four functions. 
+# Creates a special kind of "matrix" which is really a list containing four functions. 
 # set: Sets the matrix which is represented
 # get: Gets the matrix which is represented
 # setInverse: Sets the inverse matrix of the represented matrix 
